@@ -7,6 +7,8 @@
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
+import warnings
+warnings.filterwarnings("ignore")
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 import datetime
