@@ -12,12 +12,12 @@ from werkzeug.datastructures import  FileStorage
 import datetime
 
 
-rf=pickle.load(open('RandomForest.pkl', 'rb'))
-ct=pickle.load(open('ct_LE.pkl','rb'))
-dep=pickle.load(open('dep_LE.pkl','rb'))
-comp=pickle.load(open('comp_LE.pkl','rb'))
-payer=pickle.load(open('payer_LE.pkl','rb'))
-pt=pickle.load(open('ptPT.pkl','rb'))
+rf=pickle.load(open('static/RandomForest.pkl', 'rb'))
+ct=pickle.load(open('static/ct_LE.pkl','rb'))
+dep=pickle.load(open('static/dep_LE.pkl','rb'))
+comp=pickle.load(open('static/comp_LE.pkl','rb'))
+payer=pickle.load(open('static/payer_LE.pkl','rb'))
+pt=pickle.load(open('static/ptPT.pkl','rb'))
 
 app=Flask(__name__)
 import os
