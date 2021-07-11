@@ -115,7 +115,11 @@ def uploader():
         final=schedule[['Bt Nbr','Per Nbr','Md Rc']]
         final['Shows/No Shows']=Pred
         final_noshow=final[final['Shows/No Shows']==0.0]
-        Percent_No_Show=final['Shows/No Shows'].value_counts()[0]*100/final['Shows/No Shows'].value_counts().sum()
+        
+        try:
+            Percent_No_Show=final['Shows/No Shows'].value_counts()[0]*100/final['Shows/No Shows'].value_counts().sum()
+        except:
+            Percent_No_Show=0
 
 
 
