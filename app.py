@@ -74,7 +74,7 @@ def uploader():
         data=schedule.merge(df0,how='outer',on='Dt of Svc')
 
 
-        for i in ['rain_1h','rain_3h','snow_1h','snow_3h']:
+        for i in data.columns:
             data[i].fillna(0,inplace=True)
         data['Month']=data['Dt of Svc'].dt.month
         data['Date']=data['Dt of Svc'].dt.day
@@ -117,6 +117,7 @@ def uploader():
         final_noshow=final[final['Shows/No Shows']==0.0]
 
         print(final['Shows/No Shows'].value_counts())
+        print(data)
         try:
             Percent_No_Show=final['Shows/No Shows'].value_counts()[0]*100/final['Shows/No Shows'].value_counts().sum()
             
