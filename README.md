@@ -18,4 +18,3 @@ Jupyter Notebook
 Label Encoder, One Hot encoder, Power Transformer, Randomised Search CV, Linear regressor, Decision Tree, Random Forests, XG Boost
 
 
-
